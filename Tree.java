@@ -63,7 +63,7 @@ public class Tree {
         return null;
     }
 
-    public Node swap(Node x, Node y) { // :'((((((((((((( '
+    public Node swap(Node x, Node y) {
         Boolean xisleft = x.isLeft();
         Boolean yisleft = y.isLeft();
         Node parentofx = x.parent;
@@ -100,7 +100,6 @@ public class Tree {
         if (first) {
             Node parent = add(symbol); // splits, sets counters
             while (!parent.isRoot()) {
-                //            System.out.println("first occurrence and iterating");
                 parent = parent.parent;
                 Node toSwap = swapWith(parent); // anything to swap with parent?
                 if (toSwap != null) { // YES!
@@ -112,7 +111,6 @@ public class Tree {
         else {
             Node node = findNode(symbol);
             while (!node.isRoot()) {
-                //          System.out.println("not first occurrence + iterating");
                 Node toSwap = swapWith(node);
                 if (toSwap != null) {
                     node = swap(node, toSwap);
@@ -126,7 +124,7 @@ public class Tree {
         }
     }
 
-    public void printTree() {
+    public void printTree() { // for debugging
         Queue<Node> q = new LinkedList<>();
         q.add(this.root);
         Node t = new Node();
@@ -140,7 +138,7 @@ public class Tree {
         }
     }
 
-    public void fixTree() {
+    public void fixTree() { // fix nodenumbers and node binary code after swapping
         Queue<Node> q = new LinkedList<>();
         q.add(this.root);
         int num = 100;
