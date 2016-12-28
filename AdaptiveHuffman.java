@@ -154,7 +154,7 @@ public class AdaptiveHuffman extends Application {
     Button browse, compress, decompress;
     @Override
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setTitle("LZ77 Compressor/Decompressor Tool");
+        primaryStage.setTitle("Adaptive Huffman Compressor/Decompressor Tool");
         Label home = new Label("Choose file to compress/decompress:");
         TextField fillWithPath = new TextField();
         fillWithPath.setMaxWidth(200);
